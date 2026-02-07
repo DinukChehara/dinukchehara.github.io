@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 15% 3%;
+    --foreground: 220 20% 95%;
+
+    --card: 240 12% 8%;
+    --card-foreground: 220 20% 95%;
+
+    --popover: 240 12% 8%;
+    --popover-foreground: 220 20% 95%;
+
+    --primary: 270 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 70% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 30% 20%;
+    --input: 240 10% 15%;
+    --ring: 270 80% 60%;
+
+    --radius: 0.75rem;
+
+    /* Space theme custom properties */
+    --glow-primary: 270 80% 60%;
+    --glow-secondary: 200 70% 50%;
+    --nebula-purple: 280 60% 40%;
+    --nebula-blue: 220 70% 30%;
+    --star-white: 60 30% 96%;
+    --void-black: 240 20% 2%;
+
+    /* Gradients */
+    --gradient-blackhole: radial-gradient(ellipse at center, 
+      hsl(270 80% 20% / 0.4) 0%, 
+      hsl(240 15% 3%) 50%, 
+      hsl(240 20% 1%) 100%);
+    --gradient-nebula: linear-gradient(135deg, 
+      hsl(280 60% 20% / 0.3) 0%, 
+      hsl(220 70% 15% / 0.3) 50%, 
+      hsl(270 80% 25% / 0.2) 100%);
+    --gradient-glow: radial-gradient(circle, 
+      hsl(270 80% 60% / 0.15) 0%, 
+      transparent 70%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Starfield background */
+  .starfield {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: hsl(var(--star-white));
+    border-radius: 50%;
+    animation: twinkle var(--duration, 3s) ease-in-out infinite;
+    opacity: var(--opacity, 0.7);
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: var(--opacity, 0.7); transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(0.8); }
+  }
+
+  /* Blackhole effect */
+  .blackhole {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: var(--gradient-blackhole);
+    filter: blur(60px);
+    animation: pulse-glow 8s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+  }
+
+  /* Accretion disk */
+  .accretion-disk {
+    position: absolute;
+    width: 800px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, 
+      transparent 0%,
+      hsl(270 80% 50% / 0.3) 20%,
+      hsl(200 70% 50% / 0.4) 50%,
+      hsl(270 80% 50% / 0.3) 80%,
+      transparent 100%
+    );
+    filter: blur(20px);
+    animation: rotate-disk 20s linear infinite;
+    transform-origin: center;
+  }
+
+  @keyframes rotate-disk {
+    from { transform: rotateX(75deg) rotate(0deg); }
+    to { transform: rotateX(75deg) rotate(360deg); }
+  }
+
+  /* Glow effects */
+  .glow-text {
+    text-shadow: 
+      0 0 10px hsl(var(--primary) / 0.5),
+      0 0 30px hsl(var(--primary) / 0.3),
+      0 0 60px hsl(var(--primary) / 0.2);
+  }
+
+  .glow-border {
+    box-shadow: 
+      0 0 15px hsl(var(--primary) / 0.3),
+      inset 0 0 15px hsl(var(--primary) / 0.1);
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Orbit animation for skills */
+  .orbit {
+    animation: orbit var(--orbit-duration, 20s) linear infinite;
+    transform-origin: center center;
+  }
+
+  @keyframes orbit {
+    from { transform: rotate(0deg) translateX(var(--orbit-radius, 150px)) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(var(--orbit-radius, 150px)) rotate(-360deg); }
+  }
+
+  /* Progress bar glow */
+  .progress-glow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-glow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      hsl(0 0% 100% / 0.3) 50%, 
+      transparent 100%
+    );
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 40px hsl(var(--primary) / 0.2),
+      0 0 60px hsl(var(--primary) / 0.1);
+  }
+
+  /* Social icon hover */
+  .social-icon {
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 15px hsl(var(--primary) / 0.8));
+  }
+
+  /* Nebula floating blobs */
+  .nebula-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: nebula-drift 15s ease-in-out infinite;
+  }
+
+  @keyframes nebula-drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -30px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Modal backdrop blur */
+  .modal-backdrop {
+    backdrop-filter: blur(10px);
+    background: hsl(var(--void-black) / 0.8);
+  }
+}
+
+/* Horizontal scroll effect for long text on hover */
+.skill-item .skill-name-scroll {
+  display: inline-block; /* Ensure span respects transform */
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  transform: translateX(0%); /* Initial state */
+  transition: transform 0.3s ease-out; /* Smooth transition for non-scrolling text */
+  will-change: transform;
+}
+
+.animate-marquee {
+  animation: marqueeScroll 7s linear infinite; /* Scroll slightly faster */
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0%); }
+  90% { transform: translateX(calc(-100% + 80px)); } /* Scroll to end */
+  100% { transform: translateX(calc(-100% + 80px)); } /* Hold for 1 second (10% of 10s = 1s hold) */
+}
+
+
+

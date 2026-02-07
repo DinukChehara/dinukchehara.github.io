@@ -1,0 +1,26 @@
+[
+  {
+    "id": "python",
+    "name": "Python",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    "level": 95
+  },
+  {
+    "id": "java",
+    "name": "Java",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    "level": 60
+  },
+  {
+    "id": "paper",
+    "name": "Paper Plugin Dev",
+    "icon": "https://avatars.githubusercontent.com/u/7608950",
+    "level": 85
+  },
+  {
+    "id": "spigot",
+    "name": "Spigot Plugin Dev",
+    "icon": "https://static.spigotmc.org/img/spigot-og.png",
+    "level": 85
+  }
+]

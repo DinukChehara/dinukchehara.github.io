@@ -1,0 +1,25 @@
+[
+    {
+        "id": "skywars+",
+        "title": "Skywars+",
+        "description": "A skywars plugin for 1.21+",
+        "tags": ["Minecraft", "Plugin", "Java"],
+        "links": [
+            {
+                "url": "https://modrinth.com/plugin/skywars+",
+                "icon": "external-link"
+            },
+            {
+                "url": "https://github.com/DinukChehara/Skywars+",
+                "icon": "github"
+            }
+        ],
+        "featured": true,
+        "thumbnail": "/skywars.png",
+        "banner": {
+            "link": "https://modrinth.com/plugin/skywars+",
+            "image": "/skywars-banner.png"
+        },
+        "content": "A simple skywars plugin for 1.21+"
+    }
+]
