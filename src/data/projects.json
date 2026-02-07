@@ -24,7 +24,7 @@
     {
         "id": "morevillages",
         "title": "More Villages",
-        "description": "A datapack for 1.21 that adds more villages in different biomes",
+        "description": "A datapack for 1.21 that adds more villages to the game",
         "tags": ["Minecraft", "DataPack", "Java"],
         "links": [
             {
@@ -38,5 +38,23 @@
             "link": "https://modrinth.com/datapack/more-villages-datapack"
         },
         "content": "A datapack for 1.21 that adds more villages in different biomes. Adds the following villages: Cherry Grove Village, Underground Village, Pillage 'Village', End Village, etc."
+    },
+    {
+        "id": "quickstash",
+        "title": "QuickStash",
+        "description": "A plugin to easily store your items",
+        "tags": ["Minecraft", "Plugin", "Java"],
+        "links": [
+            {
+                "url": "https://modrinth.com/plugin/quickstashk",
+                "icon": "external-link"
+            }
+        ],
+        "featured": false,
+        "thumbnail": "https://cdn.modrinth.com/data/A0X7gRny/cc6c0801ecff5d0fc8e10e9102edba8c8e376bf8_96.webp",
+        "banner": {
+            "link": "https://modrinth.com/plugin/quickstash"
+        },
+        "content": "Easily store your items! You just have to hold an item and left-click a container"
     }
 ]
