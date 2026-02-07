@@ -2,21 +2,21 @@
   {
     "id": "python",
     "name": "Python",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
   },
   {
     "id": "java",
     "name": "Java",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
   },
   {
     "id": "paper",
     "name": "PaperMC",
-    "icon": "https://avatars.githubusercontent.com/u/7608950",
+    "icon": "https://avatars.githubusercontent.com/u/7608950"
   },
   {
     "id": "spigot",
     "name": "SpigotMC",
-    "icon": "https://proxy.spigotmc.org/a8fa5c49b64fdfc435cc3837163e21fbcc282084/687474703a2f2f692e696d6775722e636f6d2f4a6b594d4b58362e706e67",
+    "icon": "https://proxy.spigotmc.org/a8fa5c49b64fdfc435cc3837163e21fbcc282084/687474703a2f2f692e696d6775722e636f6d2f4a6b594d4b58362e706e67"
   }
 ]
