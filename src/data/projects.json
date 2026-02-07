@@ -51,7 +51,7 @@
             }
         ],
         "featured": true,
-        "thumbnail": "https://github.com/DinukChehara/dinukchehara.github.io/blob/main/public/images/mvimg.png",
+        "thumbnail": "https://github.com/DinukChehara/dinukchehara.github.io/blob/main/public/images/mvimg.png?raw=true",
         "banner": {
             "link": "https://modrinth.com/datapack/more-villages-datapack"
         },
