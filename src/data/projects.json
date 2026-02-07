@@ -15,7 +15,7 @@
             }
         ],
         "featured": true,
-        "thumbnail": "/skywars.png",
+        "thumbnail": "https://cdn.modrinth.com/data/cached_images/0a82d5598337b294e0f92339d0ad7ba74393ec1a.png",
         "banner": {
             "link": "https://modrinth.com/plugin/skywars+",
             "image": "https://cdn.modrinth.com/data/cached_images/0a82d5598337b294e0f92339d0ad7ba74393ec1a.png"
