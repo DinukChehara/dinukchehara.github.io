@@ -15,10 +15,10 @@
             }
         ],
         "featured": true,
-        "thumbnail": "https://cdn.modrinth.com/data/cached_images/0a82d5598337b294e0f92339d0ad7ba74393ec1a.png",
+        "thumbnail": "https://cdn.modrinth.com/data/5TqIRsyA/b416dc5d4f289040e3895092038578cbb148608e_96.webp",
         "banner": {
             "link": "https://modrinth.com/plugin/skywars+",
-            "image": "https://cdn.modrinth.com/data/cached_images/0a82d5598337b294e0f92339d0ad7ba74393ec1a.png"
+            "image": ""
         },
         "content": "A simple skywars plugin for 1.21+"
     }
