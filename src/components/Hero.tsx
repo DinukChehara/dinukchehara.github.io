@@ -32,7 +32,7 @@ const Hero = () => {
           className="text-xl md:text-2xl text-muted-foreground mb-3 animate-fade-in"
           style={{ animationDelay: "0.4s" }}
         >
-          Minecraft plugin developer
+          I like programming
         </p>
 
         {/* Extended description */}
@@ -40,7 +40,7 @@ const Hero = () => {
           className="text-base text-muted-foreground/80 mb-8 max-w-md mx-auto animate-fade-in"
           style={{ animationDelay: "0.5s" }}
         >
-          Crafting server experiences with Java & Paper API, automating the world with Python
+          I make Minecraft plugins, and Python projects for fun
         </p>
 
         {/* Social icons */}
