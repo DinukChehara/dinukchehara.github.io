@@ -1,4 +1,22 @@
-[
+[   
+    {
+        "id": "tauctions",
+        "title": "tAuctions",
+        "description": "An auction house plugin(WIP)",
+        "tags": ["Minecraft", "Paper", "Plugin", "Java"],
+        "links": [
+            {
+                "url": "https://github.com/DinukChehara/tAuctions",
+                "icon": "github"
+            }
+        ],
+        "featured": true,
+        "thumbnail": "tauctions no img 😭",
+        "banner": {
+            "link": "https://github.com/DinukChehara/tAuctions"
+        },
+        "content": "An auction house plugin for minecraft 1.21.11(later it will be 1.21.x)"
+    },
     {
         "id": "bedwars",
         "title": "Bedwars",
